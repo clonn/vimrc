@@ -20,9 +20,11 @@ set hlsearch
 set incsearch
 
 " Replace tab with 4 spaces.
-set expandtab
+set smartindent
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab
 
 " Auto-complete using Ctrl+K.
 set dictionary-=~/.vim/funclist.txt

@@ -2,11 +2,13 @@ VIM Configuration
 ==========================
 For ease of my personal VIM configuration deployment.
 
+It is a clone version from miiiCasa.
+
 Installation
 ------------
 Automatically install it without cloning this repository.
 
-     wget -O - https://raw.github.com/miiicasa/vimrc/master/install.sh | sh
+     wget -O - https://raw.github.com/clonn/vimrc/master/install.sh | sh
 
 Installed Plugins
 ------------------

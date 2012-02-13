@@ -2,6 +2,7 @@ call pathogen#infect()
 
 nnoremap <silent> <F5> :NERDTree<CR>
 
+" tab and defaul setting.
 set bs=2
 set cindent
 set history=50

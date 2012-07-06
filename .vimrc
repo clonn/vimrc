@@ -2,6 +2,10 @@ call pathogen#infect()
 
 nnoremap <silent> <F5> :NERDTree<CR>
 
+" Set up,down key and delete key can work.
+"set nocompatible
+"set backspace=2
+
 " tab and defaul setting.
 set bs=2
 set cindent
@@ -33,6 +37,17 @@ hi Cursor ctermbg=Gray ctermfg=Blue
 highlight clear SpellBad
 highlight SpellBad term=underline cterm=underline ctermfg=red
 
+" Set status line.
+set ls=2
+set statusline=%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y
+highlight StatusLine term=bold,reverse cterm=bold,reverse
+
+" Set cursor line.
+set cursorline
+highlight CursorLine cterm=none ctermbg=4
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " Set tab settings.
 highlight TabLine ctermbg=blue
 highlight TabLineFill ctermbg=green
@@ -40,3 +55,7 @@ highlight TabLineSel ctermbg=red
 
 " Activate scss.vim
 au BufRead,BufNewFile *.scss set filetype=scss
+
+" CoffeeScript
+au BufWritePost *.coffee silent CoffeeMake!
+au BufWritePost *.coffee :CoffeeCompile watch vert

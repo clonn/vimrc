@@ -8,7 +8,7 @@ Installation
 ------------
 Automatically install it without cloning this repository.
 
-     wget -O - https://raw.github.com/clonn/vimrc/master/install.sh | sh
+     wget -O - https://raw.github.com/clonn/vimrc/master/install.sh --no-check-certificate | sh
 
 Installed Plugins
 ------------------

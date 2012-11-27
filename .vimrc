@@ -15,10 +15,11 @@ set nowrap
 set number
 set title
 set wildmenu
+set hlsearch
 
 let g:EasyMotion_leader_key = ','
 set expandtab ts=4 sw=4 ai
- 
+
 " Always use utf-8 encoding.
 set fileencoding=utf-8
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
@@ -48,6 +49,16 @@ highlight CursorLine cterm=none ctermbg=4
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" Always use utf-8 encoding.
+set fileencoding=utf-8
+set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
+set encoding=utf8
+set tenc=utf8
+
+" Set foldering.
+set foldmethod=syntax
+set foldnestmax=3
+
 " Set tab settings.
 highlight TabLine ctermbg=blue
 highlight TabLineFill ctermbg=green
@@ -58,3 +69,9 @@ au BufRead,BufNewFile *.scss set filetype=scss
 
 " CoffeeScript
 au BufWritePost *.coffee silent CoffeeMake!
+
+" Removing tailing spaces.
+au! BufWrite * mark ' | silent! %s/\s\+$// | norm ''
+
+" Replace tab to spaces.
+au BufWrite * :retab

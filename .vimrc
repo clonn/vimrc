@@ -1,6 +1,6 @@
 call pathogen#infect()
 
-nnoremap <silent> <F5> :NERDTree<CR>
+"nnoremap <silent> <F5> :NERDTree<CR>
 
 " Set up,down key and delete key can work.
 "set nocompatible
@@ -58,4 +58,3 @@ au BufRead,BufNewFile *.scss set filetype=scss
 
 " CoffeeScript
 au BufWritePost *.coffee silent CoffeeMake!
-au BufWritePost *.coffee :CoffeeCompile watch vert
